@@ -1,3 +1,7 @@
-// Only confirmed brand and user-provided product families are used here.
-// Add company details, certifications and model specifications only after verification.
-window.SITE_CONFIG = { brand: 'BPI' };
+// Public contact details verified against https://www.bpibattery.com/.
+window.SITE_CONFIG = {
+  brand: 'BPI',
+  companyName: 'Shenzhen Better Power Battery Co., Ltd.',
+  contactEmail: 'info@bpibattery.com',
+  phone: '+86 19147710717'
+};
