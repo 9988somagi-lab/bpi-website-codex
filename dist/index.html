@@ -1,130 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A clean, editable B2B website starter optimized for Codex workflows.">
-  <meta name="theme-color" content="#ffffff">
-  <title>Codex Website Workspace</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script defer src="./site.config.js"></script>
-  <script defer src="./app.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore BPI NiMH, Lithium Polymer and LiFePO4 batteries, Battery Packs and Portable Power Stations. Find the right starting point for your battery project.">
+<meta name="theme-color" content="#246a53"><title>BPI | Batteries & Portable Power</title>
+<link rel="stylesheet" href="./styles.css"><script defer src="./site.config.js"></script><script defer src="./app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" data-header>
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Homepage">
-        <span class="brand-mark" aria-hidden="true">C</span>
-        <span data-brand>Codex Site</span>
-      </a>
-
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
-        <span></span><span></span><span></span>
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
-        <a href="#solutions">Solutions</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow" data-hero-eyebrow>B2B WEBSITE STARTER</p>
-          <h1 data-hero-title>A clean website workspace built for fast Codex edits.</h1>
-          <p class="hero-text" data-hero-description>Use this starter to create a new corporate website or import and modify an existing one without framework lock-in.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="#contact" data-primary-cta>Start a Project</a>
-            <a class="button button-secondary" href="#capabilities" data-secondary-cta>View Capabilities</a>
-          </div>
-          <ul class="proof-list" aria-label="Workspace benefits">
-            <li>Zero dependencies</li>
-            <li>Responsive by default</li>
-            <li>Codex instructions included</li>
-          </ul>
-        </div>
-
-        <div class="hero-visual" aria-label="Website workspace illustration">
-          <div class="browser-card">
-            <div class="browser-bar"><i></i><i></i><i></i></div>
-            <div class="browser-body">
-              <div class="browser-sidebar"></div>
-              <div class="browser-content">
-                <span></span><span></span><span></span>
-                <div class="browser-panels"><b></b><b></b><b></b></div>
-              </div>
-            </div>
-          </div>
-          <div class="floating-note note-one">AGENTS.md<br><strong>Codex-ready</strong></div>
-          <div class="floating-note note-two">npm run dev<br><strong>localhost:5173</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-muted" id="solutions">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">WHAT YOU CAN BUILD</p>
-          <h2>One workspace, multiple website jobs.</h2>
-          <p>Keep the environment simple enough for quick edits, but structured enough for ongoing production work.</p>
-        </div>
-        <div class="card-grid three">
-          <article class="card"><span class="card-number">01</span><h3>New corporate website</h3><p>Turn a brief into a polished responsive homepage, landing page, or multi-page company site.</p></article>
-          <article class="card"><span class="card-number">02</span><h3>Existing site redesign</h3><p>Import current HTML, CSS, JavaScript, and assets, then let Codex improve layout and content safely.</p></article>
-          <article class="card"><span class="card-number">03</span><h3>Campaign landing pages</h3><p>Create fast, focused pages for products, exhibitions, industries, and B2B lead generation.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="capabilities">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">WORKFLOW</p>
-          <h2>Designed so Codex knows where to work.</h2>
-          <p class="lead">The project separates content, styling, behavior, assets, and project instructions. That makes changes easier to review and reduces accidental breakage.</p>
-        </div>
-        <div class="feature-list">
-          <div><span>01</span><h3>Edit source</h3><p>Codex works in <code>src/</code>, with predictable file locations.</p></div>
-          <div><span>02</span><h3>Validate</h3><p>A lightweight checker catches common broken paths and missing essentials.</p></div>
-          <div><span>03</span><h3>Build</h3><p>The build script creates a clean <code>dist/</code> folder for deployment.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="about">
-      <div class="container stats-grid">
-        <div><strong>0</strong><span>external dependencies</span></div>
-        <div><strong>1</strong><span>command to start</span></div>
-        <div><strong>100%</strong><span>editable source</span></div>
-        <div><strong>3</strong><span>core source files</span></div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container contact-card">
-        <div>
-          <p class="eyebrow">READY FOR CODEX</p>
-          <h2>Drop in your existing website or start building.</h2>
-          <p>Replace the starter content, add your assets, then describe the change you want. The repository already includes Codex working rules.</p>
-        </div>
-        <a class="button button-primary" data-contact-link href="mailto:hello@example.com">Contact</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span data-year></span> <span data-brand-footer>Codex Site</span></span>
-      <span>Built for fast, maintainable edits.</span>
-    </div>
-  </footer>
-</body>
-</html>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="topbar"><div class="container"><span>BATTERIES & PORTABLE POWER</span><span>FOR YOUR NEXT PRODUCT. FOR YOUR NEXT PROJECT.</span></div></div>
+<header class="site-header" data-header><div class="container header-inner">
+<a class="brand" href="#top" aria-label="BPI home"><img class="brand-logo" src="./assets/bpi-logo.webp" alt="BPI" width="90" height="40"><span class="brand-caption">BATTERY<br>SOLUTIONS</span></a>
+<button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>Menu <span aria-hidden="true">+</span></button>
+<nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav><a href="#products">Products</a><a href="#project">Your project</a><a href="#about">About BPI</a><a class="button button-primary" href="#contact">Contact BPI <span aria-hidden="true">&rarr;</span></a></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="top"><div class="container hero-grid"><div>
+<p class="eyebrow">BPI · Battery manufacturer since 2002</p><h1>Power for products.<br><em>Energy for possibilities.</em></h1>
+<p class="hero-text">From rechargeable cells to battery packs and portable power stations. Explore the BPI range and start with the needs of your application.</p>
+<div class="button-row"><a class="button button-primary" href="#products">Explore our products <span aria-hidden="true">&darr;</span></a><a class="button button-secondary" href="#contact">Discuss your project <span aria-hidden="true">&rarr;</span></a></div>
+<p class="hero-footnote">NiMH / Lithium Polymer / LiFePO4 / Battery Pack / Portable Power Station</p>
+</div><div class="hero-visual"><img src="./assets/battery-range.svg" alt="Illustration of cylindrical cells, pouch cells, a battery pack and a portable power station" width="600" height="480"><div class="visual-caption"><span>CELLS → PACKS → PORTABLE POWER</span><span>PRODUCT FORM ILLUSTRATIONS</span></div></div></div></section>
+<div class="range-strip"><div class="container range-inner"><span>EXPLORE THE RANGE</span><a href="#nimh">NiMH &rarr;</a><a href="#lipo">Lithium Polymer &rarr;</a><a href="#lifepo4">LiFePO4 &rarr;</a><a href="#packs">Battery Pack &rarr;</a><a href="#power-station">Portable Power Station &rarr;</a></div></div>
+<section class="section" id="products"><div class="container"><div class="section-heading"><div><p class="eyebrow">01 / Product portfolio</p><h2>Five product families.<br>One place to start.</h2></div><p>Explore by battery chemistry or product format. Ask BPI for model-specific specifications and availability.</p></div>
+<div class="product-grid">
+<article class="product-card" id="nimh"><div class="product-image"><img src="./assets/nimh.svg" alt="Illustration of nickel-metal hydride cylindrical cells" width="360" height="220" loading="lazy"></div><div class="product-body"><span class="product-meta">01 / RECHARGEABLE CELLS</span><h3>NiMH</h3><p>Rechargeable nickel-metal hydride cells and packs, including AA, AAA and temperature-specific product ranges.</p><a class="text-link" href="https://www.bpibattery.com/products/nimh-batteries/">Explore NiMH requirements &rarr;</a></div></article>
+<article class="product-card" id="lipo"><div class="product-image"><img src="./assets/lipo.svg" alt="Illustration of lithium polymer pouch cells" width="360" height="220" loading="lazy"></div><div class="product-body"><span class="product-meta">02 / POUCH CELLS</span><h3>Lithium Polymer</h3><p>Standard, high-rate, high-voltage and temperature-specific lithium polymer batteries for your device requirements.</p><a class="text-link" href="https://www.bpibattery.com/products/lithium-polymer-batteries/">Explore Lithium Polymer requirements &rarr;</a></div></article>
+<article class="product-card" id="lifepo4"><div class="product-image"><img src="./assets/lifepo4.svg" alt="Illustration of lithium iron phosphate cells" width="360" height="220" loading="lazy"></div><div class="product-body"><span class="product-meta">03 / BATTERY CHEMISTRY</span><h3>LiFePO4</h3><p>Lithium iron phosphate battery solutions for energy storage and mobile power applications.</p><a class="text-link" href="https://www.bpibattery.com/products/lifepo4-batteries/">Explore LiFePO4 requirements &rarr;</a></div></article>
+<article class="product-card" id="packs"><div class="product-image"><img src="./assets/pack.svg" alt="Illustration of a battery pack with connection leads" width="360" height="220" loading="lazy"></div><div class="product-body"><span class="product-meta">04 / BATTERY ASSEMBLIES</span><h3>Battery Pack</h3><p>Explore cylindrical, lithium polymer, LiFePO4 and NiMH battery packs. Discuss dimensions, connections and electrical requirements.</p><a class="text-link" href="https://www.bpibattery.com/products/battery-packs/">Explore a battery pack &rarr;</a></div></article>
+<article class="product-card wide" id="power-station"><div class="product-image"><img src="./assets/station.svg" alt="Illustration of a portable power station with carry handle" width="360" height="220" loading="lazy"></div><div class="product-body"><span class="product-meta">05 / PORTABLE ENERGY</span><h3>Portable Power Station</h3><p>Portable power stations with integrated inverters for outdoor events, film production and construction sites. Ask for model-specific output details.</p><a class="text-link" href="https://www.bpibattery.com/products/portable-energy-storage/">Explore portable power &rarr;</a></div></article>
+</div></div></section>
+<section class="section project-section" id="project"><div class="container split"><div><p class="eyebrow">02 / Start a conversation</p><h2>The right battery starts<br>with the right questions.</h2><p class="lead">Give BPI a clear picture of your project so the conversation can focus on the product details that matter.</p><a class="text-link" href="#contact">Connect with BPI &rarr;</a></div><div class="steps"><div class="step"><span>01</span><div><h3>Tell us about your application</h3><p>Share what you are powering, how it is used and the operating environment.</p></div></div><div class="step"><span>02</span><div><h3>Define your requirements</h3><p>Include voltage, capacity, available space, connections and any documentation you need.</p></div></div><div class="step"><span>03</span><div><h3>Discuss the next step</h3><p>Provide your destination market, expected quantity and project timeline.</p></div></div></div></div></section>
+<section class="section" id="about"><div class="container about-panel"><div><p class="eyebrow">03 / About BPI</p><h2>Battery manufacturing.<br>Built on experience.</h2></div><div><p>Founded in 2002, Shenzhen Better Power Battery Co., Ltd. integrates battery research and development, production and sales. Its portfolio includes rechargeable batteries, battery packs and energy storage solutions.</p><p>BPI offers battery cell customization, BMS customization and battery structure customization services. Discuss your application with the team in Shenzhen, China.</p><a class="text-link" href="https://www.bpibattery.com/company-profile/">More about BPI &rarr;</a></div></div></section>
+<section class="section contact" id="contact"><div class="container"><div><p class="eyebrow">Let’s talk about your project</p><h2>What do you need to power?</h2><p>Have your application, product requirements and project timeline ready. Email info@bpibattery.com or contact the team at +86 19147710717 to discuss your next step.</p></div><a class="button" href="mailto:info@bpibattery.com">Email our team <span aria-hidden="true">&rarr;</span></a></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#top"><img class="brand-logo" src="./assets/bpi-logo.webp" alt="BPI" width="90" height="40"></a><span>© <span data-year>2026</span> Shenzhen Better Power Battery Co., Ltd.</span><div class="footer-links"><a href="#products">Products</a><a href="https://www.bpibattery.com/">Official website &rarr;</a></div></div></footer>
+</body></html>
