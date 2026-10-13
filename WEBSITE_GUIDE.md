@@ -1,36 +1,48 @@
-# BPI website editing guide
+# BPI website development
 
-This is a zero-dependency, static English B2B website. Each page is a real HTML document, so product and company content remains available without JavaScript and works on GitHub Pages under the repository subpath.
+A bright English B2B battery website with real BPI photography, built as static HTML for GitHub Pages. The core content and navigation work without JavaScript.
 
 ## Site structure
 
-- `src/index.html`: homepage
-- `src/products.html`: product catalog with progressive search and filtering
-- `src/nimh.html`, `lithium-polymer.html`, `lifepo4.html`, `battery-packs.html`, `portable-power.html`: product-family details, ranges, selection guides and related applications
-- `src/applications.html` and `src/application-*.html`: application overview and six application detail pages
-- `src/solutions.html`, `cell-customization.html`, `bms-customization.html`, `structure-customization.html`: customization services
-- `src/about.html`, `manufacturing.html`: company and manufacturing
-- `src/contact.html`: enquiry builder and public contact details
-- `src/privacy.html`, `sitemap.html`: enquiry information and full site navigation
-- `src/styles.css`: shared design tokens, layouts and responsive rules
-- `src/app.js`: progressive navigation, catalog search and browser-based enquiry preparation
-- `src/site.config.js`: verified public contact configuration
-- `src/assets/photos/`: locally stored official photography
-- `src/assets/SOURCES.md`: source records and content limitations
+- `src/index.html`: homepage with an interactive featured-product selector
+- `src/products.html`: product finder, search, family filters and comparison table
+- Five product-family pages: `nimh.html`, `lithium-polymer.html`, `lifepo4.html`, `battery-packs.html`, `portable-power.html`
+- Fifteen `*-product-*.html` pages: individual catalog range and series details, with relevant enquiry context
+- `src/applications.html` and six `application-*.html` pages: industry needs connected to products and customization
+- `src/solutions.html` and three customization pages: cell, BMS and structure services
+- `src/about.html`, `manufacturing.html`: company and real manufacturing gallery
+- `src/resources.html`: a technical briefing checklist and documentation requests
+- `src/contact.html`: context-aware enquiry builder and verified contact details
+- `src/privacy.html`, `sitemap.html`: enquiry information and complete navigation
 
-All pages have the same static header and footer. Keep those blocks consistent when changing global navigation. Internal links are relative `.html` paths for GitHub Pages compatibility. Contact links may pass `product`, `interest`, `application` or `service` query parameters to prefill the enquiry.
+## Shared components
 
-## Enquiry behavior
+`src/components/header.template` and `footer.template` are the shared static navigation components. `scripts/sync-layout.mjs` replaces only the marked shared blocks in every HTML page, preserving the individual page body. Both `npm run check` and `npm run build` synchronize the components, so global navigation cannot drift between pages. A page’s `data-section` attribute controls its active navigation state.
 
-The form validates required fields, prepares a reviewable enquiry, and opens a `mailto:` draft only when the customer chooses it. It does not send data to a backend. Customers can copy the text and email BPI directly if their device has no configured email app. Direct email, phone and WhatsApp links provide alternatives; the email fallback works without JavaScript.
+Use `src/styles.css` for the shared design tokens, layouts and responsive rules. The locally hosted Manrope variable font and license are in `src/assets/fonts/`. Brand identity is retained in the official BPI logo; emerald, mint and lake-blue accents form the energy design palette.
 
-A server-based enquiry submission service would require a separately configured endpoint and credentials. Do not add a fake success message or hardcode a secret.
+`src/page-index.js` supplies the browser-only global search. Update it when adding, renaming or removing a page. `src/content/site.json` records the product, application and service content for reference; edits to this reference data do not automatically regenerate page bodies.
 
-## Content standards
+## Customer journeys
 
-Use the official source records for company and product facts. Do not generalize specifications visible on one photographed product across its whole family. Confirm model-specific parameters, test reports and certification requirements with BPI. Application suggestions are discussion starting points, not guarantees of compatibility.
+- Homepage → product family → individual product → enquiry with `product` and `interest` context
+- Application → relevant product families or customization → enquiry with `application` context
+- Customization → product or manufacturing information → enquiry with `service` context
+- Resources → product selection or model-specific documentation request
 
-## Development and publication
+Internal links are relative `.html` paths, supporting the GitHub Pages repository subpath. New pages should use the common shared-layout markers and appear in the page index and sitemap.
+
+## Enquiries
+
+The form validates required fields and prepares a reviewable email draft. It does not send a message to a backend. The customer sends from their own email app or copies the prepared text. Direct email, phone and WhatsApp provide alternatives, including without JavaScript.
+
+Changes invalidate a previous prepared draft so outdated information cannot be sent accidentally. Do not add a false success notification. Automated submission requires a separately configured backend.
+
+## Content and images
+
+Official photography is stored in `src/assets/photos/`. The company, product and image sources are recorded in `src/assets/SOURCES.md`. Product photographs may show specifications applicable to one pictured configuration; do not generalize those values across the family. Request current model-specific documentation from BPI. Application content guides a discussion, rather than guaranteeing compatibility.
+
+## Validation and deployment
 
 ```sh
 npm run dev
@@ -38,4 +50,6 @@ npm run check
 npm run build
 ```
 
-The build copies `src/` to `dist/`. The existing GitHub Actions workflow publishes `dist/` when `main` is pushed. Verify desktop/mobile navigation, images, product filtering and enquiry preparation when editing the corresponding UI. Publishing in GitHub Pages settings must be enabled by the repository owner; a push alone is not proof that deployment completed.
+Checks validate headings, assets, page links, cross-page anchors and navigation reachability. Inspect desktop and mobile layouts, global search, menus, product filters and end-to-end enquiry journeys when changing UI. The build synchronizes shared components and copies `src/` to `dist/`.
+
+The existing GitHub Actions workflow deploys `dist/` on pushes to `main`. Check the workflow outcome and live content before claiming an online update has completed.

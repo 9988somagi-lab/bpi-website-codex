@@ -34,8 +34,80 @@
       else activeGroup?.querySelector('summary').focus();
     }
   });
-  matchMedia('(min-width: 701px)').addEventListener('change', closeNavigation);
+  matchMedia('(min-width: 1021px)').addEventListener('change', closeNavigation);
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+  const stage = document.querySelector('.energy-stage');
+  if (stage) {
+    const selections = {
+      'portable-power': { image: 'station-mb', alt: 'BPI MB Series portable power station', family: 'Portable Power Stations', name: 'MB Series', heading: 'Energy, made portable.' },
+      'lithium-polymer': { image: 'lipo-photo', alt: 'BPI lithium polymer batteries', family: 'Lithium Polymer Batteries', name: 'Pouch-cell solutions', heading: 'Power for compact products.' },
+      lifepo4: { image: 'lifepo4-photo', alt: 'BPI LiFePO4 battery', family: 'LiFePO4 Batteries', name: 'Lithium iron phosphate', heading: 'Energy for your system.' }
+    };
+    const selectors = [...document.querySelectorAll('[data-hero]')];
+    selectors.forEach(selector => selector.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const selected = selections[selector.dataset.hero];
+      const img = stage.querySelector('img');
+      img.src = `./assets/photos/${selected.image}.webp`;
+      img.alt = selected.alt;
+      stage.querySelector('[data-stage-link]').href = selector.getAttribute('href');
+      stage.querySelector('[data-stage-link]').setAttribute('aria-label', 'Explore ' + selected.family);
+      stage.querySelector('[data-stage-label]').textContent = selected.family;
+      stage.querySelector('[data-stage-name]').textContent = selected.name;
+      stage.querySelector('.stage-label strong').textContent = selected.heading;
+      selectors.forEach(item => {
+        if (item === selector) item.setAttribute('aria-current', 'true');
+        else item.removeAttribute('aria-current');
+      });
+    }));
+  }
+
+  const searchDialog = document.querySelector('.search-dialog');
+  if (searchDialog) {
+    const input = searchDialog.querySelector('input');
+    const results = searchDialog.querySelector('.search-results');
+    const searchStatus = searchDialog.querySelector('.search-status');
+    let opener;
+    const renderResults = () => {
+      const query = input.value.trim().toLowerCase();
+      results.replaceChildren();
+      if (!query) { searchStatus.textContent = 'Type to find a product or page.'; return; }
+      const matches = (window.SITE_SEARCH || []).filter(page =>
+        `${page.title} ${page.description} ${page.section}`.toLowerCase().includes(query)
+      ).slice(0, 12);
+      searchStatus.textContent = matches.length ? `${matches.length} results. Select a page to explore.` : 'No matching pages. Try a product family or application.';
+      matches.forEach(page => {
+        const anchor = document.createElement('a');
+        anchor.href = page.url;
+        anchor.append(document.createTextNode(page.title));
+        const description = document.createElement('span');
+        description.textContent = page.description;
+        anchor.append(description);
+        results.append(anchor);
+      });
+    };
+    document.querySelectorAll('[data-open-search]').forEach(link => link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || !searchDialog.showModal) return;
+      event.preventDefault();
+      opener = link;
+      closeNavigation();
+      searchDialog.showModal();
+      input.focus();
+      renderResults();
+    }));
+    input.addEventListener('input', renderResults);
+    searchDialog.querySelector('.search-close').addEventListener('click', () => searchDialog.close());
+    searchDialog.addEventListener('close', () => {
+      if (opener && getComputedStyle(nav).display !== 'none') opener.focus();
+      else menu?.focus();
+    });
+    searchDialog.addEventListener('click', event => {
+      const bounds = searchDialog.getBoundingClientRect();
+      if (event.target === searchDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) searchDialog.close();
+    });
+  }
 
   const catalog = document.querySelector('[data-catalog]');
   if (catalog) {
@@ -68,6 +140,8 @@
     const product = params.get('product');
     if ([...form.elements.product.options].some(option => option.value === product)) form.elements.product.value = product;
     const context = ['interest', 'application', 'service'].map(key => params.get(key)).filter(Boolean);
+    const contextNotice = document.querySelector('[data-enquiry-context]');
+    if (context.length && contextNotice) { contextNotice.hidden = false; contextNotice.textContent = 'Your enquiry: ' + context.map(value => value.slice(0, 200)).join(' · '); }
     if (context.length) form.elements.requirements.value = 'Interested in: ' + context.map(value => value.slice(0, 200)).join('; ') + '\n\nProject requirements: ';
     let enquiry = '';
     const status = form.querySelector('.form-status');

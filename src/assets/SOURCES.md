@@ -55,3 +55,17 @@ Logo: `bpi-logo.webp` — https://www.bpibattery.com/uploads/images/shenzhen-bet
 - `photos/team.webp` — https://www.bpibattery.com/uploads/images/bettery-customer-service-team.webp
 - `photos/wearables.webp` — https://www.bpibattery.com/uploads/images/smart-wearables.webp
 - `photos/workshop.webp` — https://www.bpibattery.com/uploads/images/bettery-workshop.webp
+
+## Additional assets and product series (2026-10-13 redesign)
+
+- `photos/station-f.webp` — https://www.bpibattery.com/uploads/images/outdoor-power-supply-f-series-for-sale.webp
+- `photos/station-mb.webp` — https://www.bpibattery.com/uploads/images/outdoor-power-mb-series-for-sale.webp
+- `photos/station-q.webp` — https://www.bpibattery.com/uploads/images/outdoor-power-q-series-for-sale.webp
+- F, MB and Q series names and descriptions: https://www.bpibattery.com/products/portable-energy-storage/ . Only the official MB aluminum alloy enclosure and Q LiFePO4 chemistry descriptions are retained; no charge-time, output-power or cycle-life numbers are generalized.
+- `photos/solar-lighting.webp` — https://www.bpibattery.com/uploads/images/solar-street-lights.webp . This is application concept imagery, not a photograph of a BPI-installed project.
+- `photos/home-energy.webp` — https://www.bpibattery.com/uploads/images/home-energy-storage_1761532637.webp . Official energy storage application illustration.
+- `photos/rechargeable-future.webp` — https://www.bpibattery.com/uploads/images/power-the-future-with-bpi-advanced-batteries-sales.webp . Official rechargeable-energy concept imagery.
+
+Local font: Manrope variable Latin, `@fontsource-variable/manrope` version 5.3.0 from registry.npmjs.org. Package SHA-512 integrity verified before extraction; license retained in `fonts/LICENSE`. No third-party font request is made by the website.
+
+Fifteen individual product pages describe verified official product ranges rather than claiming unverified individual model specifications. The resource centre provides general engineering briefing guidance; `Wh = V × Ah` is an energy relationship, not a runtime guarantee.

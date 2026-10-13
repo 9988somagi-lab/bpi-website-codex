@@ -1,0 +1,664 @@
+{
+  "products": [
+    {
+      "slug": "nimh",
+      "name": "NiMH Batteries",
+      "short": "NiMH",
+      "tag": "Rechargeable cells & packs",
+      "img": "nimh-industrial",
+      "desc": "Rechargeable cells and packs for everyday devices and demanding operating environments.",
+      "intro": "A versatile rechargeable battery range. Explore standard cylindrical cells, temperature-specific options and NiMH battery packs for your application.",
+      "chips": [
+        "Cylindrical cells",
+        "Temperature-specific ranges",
+        "Battery packs"
+      ],
+      "variants": [
+        [
+          "AA & AAA cells",
+          "nimh-photo",
+          "Standard cylindrical formats for rechargeable devices."
+        ],
+        [
+          "Temperature-specific NiMH",
+          "nimh-cells",
+          "High-, low- and wide-temperature ranges for defined operating environments."
+        ],
+        [
+          "NiMH battery packs",
+          "nimh-pack",
+          "Pack assemblies to discuss with your voltage, dimensions and connection requirements."
+        ]
+      ],
+      "ranges": [
+        "AA, AAA, AAAA and AAAAA",
+        "9V, C, D, F, M and SC formats",
+        "High-, low- and wide-temperature options",
+        "Ultra-low self-discharge range",
+        "NiMH battery packs"
+      ],
+      "apps": [
+        "automotive",
+        "iot",
+        "medical"
+      ],
+      "rows": [
+        [
+          "Chemistry",
+          "Nickel-metal hydride (NiMH)"
+        ],
+        [
+          "Product formats",
+          "Cylindrical cells and battery packs"
+        ],
+        [
+          "Available ranges",
+          "Standard, temperature-specific and ultra-low self-discharge"
+        ],
+        [
+          "Project inputs",
+          "Voltage, capacity, charge method, space and operating temperature"
+        ]
+      ]
+    },
+    {
+      "slug": "lithium-polymer",
+      "name": "Lithium Polymer Batteries",
+      "short": "Lithium Polymer",
+      "tag": "Lightweight pouch-cell solutions",
+      "img": "lipo-photo",
+      "desc": "Pouch cells and packs for devices where space, weight and form factor matter.",
+      "intro": "Build around your device, rather than the other way around. BPI offers standard and specialist lithium polymer product ranges, with battery cell and pack customization services.",
+      "chips": [
+        "Pouch cells",
+        "High-rate options",
+        "Cell customization"
+      ],
+      "variants": [
+        [
+          "Standard Li-Po batteries",
+          "lipo-photo",
+          "A starting point for portable electronics and space-conscious product design."
+        ],
+        [
+          "High-rate Li-Po batteries",
+          "lipo-high-rate",
+          "Discuss discharge requirements and the appropriate model for peak loads."
+        ],
+        [
+          "Li-Po battery packs",
+          "lipo-pack",
+          "Pack options for product integration and application-specific requirements."
+        ]
+      ],
+      "ranges": [
+        "Standard Li-Po batteries",
+        "High-rate and high-voltage ranges",
+        "Fast-charge range",
+        "High-, low- and wide-temperature options",
+        "Li-Po battery packs"
+      ],
+      "apps": [
+        "wearables",
+        "medical",
+        "iot"
+      ],
+      "rows": [
+        [
+          "Chemistry",
+          "Lithium polymer"
+        ],
+        [
+          "Product formats",
+          "Pouch cells and Li-Po battery packs"
+        ],
+        [
+          "Available ranges",
+          "Standard, high-rate, high-voltage, fast-charge and temperature-specific"
+        ],
+        [
+          "Project inputs",
+          "Envelope dimensions, voltage, capacity, load and charging requirements"
+        ]
+      ]
+    },
+    {
+      "slug": "lifepo4",
+      "name": "LiFePO4 Batteries",
+      "short": "LiFePO4",
+      "tag": "Energy storage & mobile power",
+      "img": "lifepo4-photo",
+      "desc": "Battery systems for energy storage, mobile equipment and power applications.",
+      "intro": "Explore BPI lithium iron phosphate battery systems for energy storage and mobile power. Choose the product range around your system requirements, with model details confirmed by BPI.",
+      "chips": [
+        "Energy storage",
+        "Mobile equipment",
+        "Battery systems"
+      ],
+      "variants": [
+        [
+          "12V LiFePO4 range",
+          "lifepo4-photo",
+          "A product family for storage and mobile power projects."
+        ],
+        [
+          "24V LiFePO4 range",
+          "lifepo4-24",
+          "Discuss the electrical and integration needs of your system."
+        ],
+        [
+          "48V LiFePO4 range",
+          "lifepo4-48",
+          "Explore product options for higher-voltage system architectures."
+        ]
+      ],
+      "ranges": [
+        "12V, 24V and 48V product families",
+        "Small-power 48V, 60V and 72V families",
+        "LiFePO4 pack options"
+      ],
+      "apps": [
+        "storage",
+        "robotics"
+      ],
+      "rows": [
+        [
+          "Chemistry",
+          "Lithium iron phosphate (LiFePO4)"
+        ],
+        [
+          "Product families",
+          "12V, 24V, 48V and small-power ranges"
+        ],
+        [
+          "Integration needs",
+          "BMS, enclosure and interfaces are model-dependent"
+        ],
+        [
+          "Project inputs",
+          "System voltage, energy requirement, peak load and communication needs"
+        ]
+      ]
+    },
+    {
+      "slug": "battery-packs",
+      "name": "Battery Packs",
+      "short": "Battery Pack",
+      "tag": "Integrated battery assemblies",
+      "img": "pack-photo",
+      "desc": "Cylindrical, polymer, LiFePO4 and NiMH pack options for product integration.",
+      "intro": "The cell is only part of the solution. Bring together chemistry, electrical requirements, connections and physical design in a battery pack that can be reviewed against your application.",
+      "chips": [
+        "Multiple chemistries",
+        "BMS customization",
+        "Structure customization"
+      ],
+      "variants": [
+        [
+          "Cylindrical battery packs",
+          "pack-photo",
+          "Discuss cell arrangement, connections and the installation envelope."
+        ],
+        [
+          "Lithium polymer packs",
+          "lipo-pack",
+          "Explore pouch-cell assemblies for compact devices."
+        ],
+        [
+          "NiMH Battery Packs",
+          "pack-nimh",
+          "Nickel-metal hydride pack assemblies for product integration."
+        ]
+      ],
+      "ranges": [
+        "Cylindrical battery packs",
+        "Lithium polymer packs",
+        "Aluminum shell packs",
+        "LiFePO4 packs",
+        "NiMH packs"
+      ],
+      "apps": [
+        "robotics",
+        "automotive",
+        "iot"
+      ],
+      "rows": [
+        [
+          "Product families",
+          "Cylindrical, Li-Po, aluminum shell, LiFePO4 and NiMH"
+        ],
+        [
+          "Customization",
+          "Cell, BMS and battery structure services"
+        ],
+        [
+          "Integration inputs",
+          "Enclosure, connectors, cable lengths and mounting"
+        ],
+        [
+          "Electrical inputs",
+          "Voltage, capacity, charge method, continuous and peak load"
+        ]
+      ]
+    },
+    {
+      "slug": "portable-power",
+      "name": "Portable Power Stations",
+      "short": "Portable Power Station",
+      "tag": "Portable energy storage",
+      "img": "station-mb",
+      "desc": "Integrated portable energy for outdoor work, events and backup power projects.",
+      "intro": "Portable energy storage brings battery power and an inverter together. Explore BPI portable power stations for outdoor events, film production and work away from a fixed power supply.",
+      "chips": [
+        "Portable energy storage",
+        "Integrated inverter",
+        "Outdoor & backup use"
+      ],
+      "variants": [
+        [
+          "F Series Portable Power",
+          "station-f",
+          "Portable outdoor power with multiple output interfaces."
+        ],
+        [
+          "MB Series Portable Power",
+          "station-mb",
+          "Portable energy storage in an aluminum alloy enclosure."
+        ],
+        [
+          "Q Series Portable Power",
+          "station-q",
+          "A lithium iron phosphate portable power series."
+        ]
+      ],
+      "ranges": [
+        "Portable energy storage",
+        "Related home energy storage range"
+      ],
+      "apps": [
+        "storage"
+      ],
+      "rows": [
+        [
+          "Product type",
+          "Integrated portable energy storage"
+        ],
+        [
+          "Core architecture",
+          "Battery storage and inverter"
+        ],
+        [
+          "Output specifications",
+          "Confirm AC/DC outputs and interfaces for the selected model"
+        ],
+        [
+          "Project inputs",
+          "Load, runtime, charging source, output standard and destination market"
+        ]
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "slug": "automotive",
+      "name": "Automotive & In-car Systems",
+      "img": "automotive",
+      "desc": "Power for connected vehicle electronics and in-car systems.",
+      "examples": [
+        "T-BOX, V2X, OBD and e-call",
+        "Dash cameras",
+        "Vehicle tracking and fleet management"
+      ],
+      "needs": [
+        [
+          "Temperature",
+          "Specify the operating and storage conditions inside the vehicle."
+        ],
+        [
+          "Electrical load",
+          "Define normal use, peak demand and the charging interface."
+        ],
+        [
+          "Integration",
+          "Share installation space, connectors and applicable project standards."
+        ]
+      ],
+      "ps": [
+        "nimh",
+        "battery-packs"
+      ]
+    },
+    {
+      "slug": "wearables",
+      "name": "Wearables & Consumer Electronics",
+      "img": "wearables",
+      "desc": "Compact power for connected, portable and personal devices.",
+      "examples": [
+        "VR and AR devices",
+        "Personal care devices",
+        "Portable entertainment and imaging"
+      ],
+      "needs": [
+        [
+          "Form factor",
+          "Share the available battery space, weight targets and mechanical constraints."
+        ],
+        [
+          "Usage pattern",
+          "Describe active, standby and peak-load modes."
+        ],
+        [
+          "Charging",
+          "Confirm the charging method and product-level safety requirements."
+        ]
+      ],
+      "ps": [
+        "lithium-polymer",
+        "battery-packs"
+      ]
+    },
+    {
+      "slug": "medical",
+      "name": "Medical & Healthcare",
+      "img": "medical",
+      "desc": "Battery discussions for portable healthcare equipment.",
+      "examples": [
+        "Portable diagnostic equipment",
+        "Auto injectors and nebulizers",
+        "Electric wheelchairs"
+      ],
+      "needs": [
+        [
+          "Duty cycle",
+          "Define normal use, standby time and any critical operating scenarios."
+        ],
+        [
+          "Documentation",
+          "Identify the standards and documentation required for your device."
+        ],
+        [
+          "System design",
+          "Share charging, monitoring and protection requirements."
+        ]
+      ],
+      "ps": [
+        "lithium-polymer",
+        "nimh",
+        "battery-packs"
+      ]
+    },
+    {
+      "slug": "robotics",
+      "name": "Automation & Robotics",
+      "img": "robotics",
+      "desc": "Battery integration for machines that move and work.",
+      "examples": [
+        "AGVs and AMRs",
+        "Robotics and exoskeletons",
+        "Power tools and gardening equipment"
+      ],
+      "needs": [
+        [
+          "Peak power",
+          "Describe motor startup, movement and peak-load demands."
+        ],
+        [
+          "System communication",
+          "Specify BMS monitoring, interfaces and control requirements."
+        ],
+        [
+          "Mechanical design",
+          "Provide mounting, enclosure and service-access requirements."
+        ]
+      ],
+      "ps": [
+        "lifepo4",
+        "battery-packs"
+      ]
+    },
+    {
+      "slug": "iot",
+      "name": "IoT & Connected Devices",
+      "img": "iot",
+      "desc": "Power for tracking, sensing and connected infrastructure.",
+      "examples": [
+        "Container and asset tracking",
+        "Data loggers and monitoring devices",
+        "Handheld terminals"
+      ],
+      "needs": [
+        [
+          "Duty cycle",
+          "Share transmission frequency, standby demand and peak current."
+        ],
+        [
+          "Environment",
+          "Specify exposure, storage and operating conditions."
+        ],
+        [
+          "Integration",
+          "Define battery dimensions, connectors and service requirements."
+        ]
+      ],
+      "ps": [
+        "nimh",
+        "lithium-polymer",
+        "battery-packs"
+      ]
+    },
+    {
+      "slug": "storage",
+      "name": "Mobile Power & Energy Storage",
+      "img": "home-energy",
+      "desc": "Energy solutions for mobile equipment and backup power.",
+      "examples": [
+        "Portable energy storage",
+        "Golf carts and sightseeing vehicles",
+        "Home energy storage and backup applications"
+      ],
+      "needs": [
+        [
+          "Energy demand",
+          "Identify the equipment loads, expected runtime and charging sources."
+        ],
+        [
+          "Output architecture",
+          "Confirm system voltage, interfaces and destination-market requirements."
+        ],
+        [
+          "Installation",
+          "Describe mobility, mounting, environment and communication needs."
+        ]
+      ],
+      "ps": [
+        "lifepo4",
+        "portable-power",
+        "battery-packs"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "slug": "cell-customization",
+      "name": "Battery Cell Customization",
+      "img": "custom",
+      "desc": "Start with chemistry, dimensions and electrical requirements.",
+      "intro": "A battery cell should be reviewed in the context of the product it powers. BPI offers battery cell customization services for application-specific projects.",
+      "items": [
+        [
+          "Application review",
+          "Describe device behavior, charging method and the operating environment."
+        ],
+        [
+          "Cell requirements",
+          "Share the target chemistry, voltage, capacity and dimensional envelope."
+        ],
+        [
+          "Model discussion",
+          "Confirm the proposed cell and its actual specifications with BPI before integration."
+        ]
+      ],
+      "ps": [
+        "nimh",
+        "lithium-polymer"
+      ]
+    },
+    {
+      "slug": "bms-customization",
+      "name": "BMS Customization",
+      "img": "bms",
+      "desc": "Discuss protection, monitoring and system interfaces.",
+      "intro": "Battery management is part of the system design. BPI offers BMS customization services so electrical protection, monitoring and interface requirements can be discussed alongside the pack.",
+      "items": [
+        [
+          "Electrical architecture",
+          "Define the pack configuration, voltage and continuous or peak loads."
+        ],
+        [
+          "Protection & monitoring",
+          "Specify the functions, measurements and operating conditions your project requires."
+        ],
+        [
+          "Interfaces",
+          "Discuss communication, control and charging interfaces for product integration."
+        ]
+      ],
+      "ps": [
+        "battery-packs",
+        "lifepo4"
+      ]
+    },
+    {
+      "slug": "structure-customization",
+      "name": "Battery Structure Customization",
+      "img": "pack-photo",
+      "desc": "Bring the pack, enclosure and product together.",
+      "intro": "Physical integration matters as much as electrical design. BPI offers battery structure customization services for pack dimensions, enclosure and connection requirements.",
+      "items": [
+        [
+          "Installation envelope",
+          "Provide drawings, space constraints and mounting requirements."
+        ],
+        [
+          "Connections",
+          "Define connectors, cable routing and the interfaces to your device."
+        ],
+        [
+          "Use environment",
+          "Share environmental conditions and service-access needs for review."
+        ]
+      ],
+      "ps": [
+        "battery-packs",
+        "portable-power"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "slug": "nimh-product-1",
+      "name": "AA & AAA cells",
+      "img": "nimh-photo",
+      "desc": "Standard cylindrical formats for rechargeable devices.",
+      "family": "nimh"
+    },
+    {
+      "slug": "nimh-product-2",
+      "name": "Temperature-specific NiMH",
+      "img": "nimh-cells",
+      "desc": "High-, low- and wide-temperature ranges for defined operating environments.",
+      "family": "nimh"
+    },
+    {
+      "slug": "nimh-product-3",
+      "name": "NiMH battery packs",
+      "img": "nimh-pack",
+      "desc": "Pack assemblies to discuss with your voltage, dimensions and connection requirements.",
+      "family": "nimh"
+    },
+    {
+      "slug": "lithium-polymer-product-1",
+      "name": "Standard Li-Po batteries",
+      "img": "lipo-photo",
+      "desc": "A starting point for portable electronics and space-conscious product design.",
+      "family": "lithium-polymer"
+    },
+    {
+      "slug": "lithium-polymer-product-2",
+      "name": "High-rate Li-Po batteries",
+      "img": "lipo-high-rate",
+      "desc": "Discuss discharge requirements and the appropriate model for peak loads.",
+      "family": "lithium-polymer"
+    },
+    {
+      "slug": "lithium-polymer-product-3",
+      "name": "Li-Po battery packs",
+      "img": "lipo-pack",
+      "desc": "Pack options for product integration and application-specific requirements.",
+      "family": "lithium-polymer"
+    },
+    {
+      "slug": "lifepo4-product-1",
+      "name": "12V LiFePO4 range",
+      "img": "lifepo4-photo",
+      "desc": "A product family for storage and mobile power projects.",
+      "family": "lifepo4"
+    },
+    {
+      "slug": "lifepo4-product-2",
+      "name": "24V LiFePO4 range",
+      "img": "lifepo4-24",
+      "desc": "Discuss the electrical and integration needs of your system.",
+      "family": "lifepo4"
+    },
+    {
+      "slug": "lifepo4-product-3",
+      "name": "48V LiFePO4 range",
+      "img": "lifepo4-48",
+      "desc": "Explore product options for higher-voltage system architectures.",
+      "family": "lifepo4"
+    },
+    {
+      "slug": "battery-packs-product-1",
+      "name": "Cylindrical battery packs",
+      "img": "pack-photo",
+      "desc": "Discuss cell arrangement, connections and the installation envelope.",
+      "family": "battery-packs"
+    },
+    {
+      "slug": "battery-packs-product-2",
+      "name": "Lithium polymer packs",
+      "img": "lipo-pack",
+      "desc": "Explore pouch-cell assemblies for compact devices.",
+      "family": "battery-packs"
+    },
+    {
+      "slug": "battery-packs-product-3",
+      "name": "NiMH Battery Packs",
+      "img": "pack-nimh",
+      "desc": "Nickel-metal hydride pack assemblies for product integration.",
+      "family": "battery-packs"
+    },
+    {
+      "slug": "portable-power-product-1",
+      "name": "F Series Portable Power",
+      "img": "station-f",
+      "desc": "Portable outdoor power with multiple output interfaces.",
+      "family": "portable-power"
+    },
+    {
+      "slug": "portable-power-product-2",
+      "name": "MB Series Portable Power",
+      "img": "station-mb",
+      "desc": "Portable energy storage in an aluminum alloy enclosure.",
+      "family": "portable-power"
+    },
+    {
+      "slug": "portable-power-product-3",
+      "name": "Q Series Portable Power",
+      "img": "station-q",
+      "desc": "A lithium iron phosphate portable power series.",
+      "family": "portable-power"
+    }
+  ]
+}
