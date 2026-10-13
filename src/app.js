@@ -99,6 +99,12 @@
     }));
     input.addEventListener('input', renderResults);
     searchDialog.querySelector('.search-close').addEventListener('click', () => searchDialog.close());
+    searchDialog.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        searchDialog.close();
+      }
+    });
     searchDialog.addEventListener('close', () => {
       if (opener && getComputedStyle(nav).display !== 'none') opener.focus();
       else menu?.focus();
