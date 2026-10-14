@@ -30,7 +30,7 @@ for (const [file, page] of pages) {
   if (!/name=["']viewport["']/i.test(page.html)) errors.push(`${label}: missing viewport meta`);
   if ([...page.html.matchAll(/<h1[\s>]/gi)].length !== 1) errors.push(`${label}: expected one <h1>`);
 
-  for (const match of page.html.matchAll(/\b(src|href)=["']([^"']*)["']/gi)) {
+  for (const match of page.html.matchAll(/\b(src|href|poster)=["']([^"']*)["']/gi)) {
     const [, attr, ref] = match;
     if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(ref)) continue;
     if (!ref) { errors.push(`${label}: empty ${attr}`); continue; }

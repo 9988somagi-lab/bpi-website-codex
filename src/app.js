@@ -37,33 +37,38 @@
   matchMedia('(min-width: 1021px)').addEventListener('change', closeNavigation);
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
-  const stage = document.querySelector('.energy-stage');
-  if (stage) {
-    const selections = {
-      'portable-power': { image: 'station-mb', alt: 'BPI MB Series portable power station', family: 'Portable Power Stations', name: 'MB Series', heading: 'Energy, made portable.' },
-      'lithium-polymer': { image: 'lipo-photo', alt: 'BPI lithium polymer batteries', family: 'Lithium Polymer Batteries', name: 'Pouch-cell solutions', heading: 'Power for compact products.' },
-      lifepo4: { image: 'lifepo4-photo', alt: 'BPI LiFePO4 battery', family: 'LiFePO4 Batteries', name: 'Lithium iron phosphate', heading: 'Energy for your system.' }
-    };
-    const selectors = [...document.querySelectorAll('[data-hero]')];
-    selectors.forEach(selector => selector.addEventListener('click', event => {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      const selected = selections[selector.dataset.hero];
-      const img = stage.querySelector('img');
-      const version = window.SITE_CONFIG.assetVersions?.[selected.image];
-      img.src = `./assets/photos/${selected.image}.webp${version ? "?v=" + version : ""}`;
-      img.alt = selected.alt;
-      stage.querySelector('[data-stage-link]').href = selector.getAttribute('href');
-      stage.querySelector('[data-stage-link]').setAttribute('aria-label', 'Explore ' + selected.family);
-      stage.querySelector('[data-stage-label]').textContent = selected.family;
-      stage.querySelector('[data-stage-name]').textContent = selected.name;
-      stage.querySelector('.stage-label strong').textContent = selected.heading;
-      selectors.forEach(item => {
-        if (item === selector) item.setAttribute('aria-current', 'true');
-        else item.removeAttribute('aria-current');
+  // Tabs enhance an ordinary set of linked, readable application sections.
+  document.querySelectorAll('[data-scene-showcase]').forEach(showcase => {
+    const tabs = [...showcase.querySelectorAll('[data-scene-tab]')];
+    const panels = [...showcase.querySelectorAll('[data-scene-panel]')];
+    const activate = (tab, moveFocus = false) => {
+      tabs.forEach(item => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
       });
-    }));
-  }
+      panels.forEach(panel => {
+        const selected = panel.dataset.scenePanel === tab.dataset.sceneTab;
+        panel.hidden = !selected;
+        panel.setAttribute('role', 'tabpanel');
+        panel.setAttribute('aria-labelledby', 'tab-' + panel.dataset.scenePanel);
+        panel.classList.toggle('scene-enter', selected);
+      });
+      if (moveFocus) tab.focus();
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', event => {
+        let next;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) { event.preventDefault(); activate(tabs[next], true); }
+      });
+    });
+    if (tabs.length) activate(tabs[0]);
+  });
 
   const searchDialog = document.querySelector('.search-dialog');
   if (searchDialog) {

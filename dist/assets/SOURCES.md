@@ -72,7 +72,7 @@ Fifteen individual product pages describe verified official product ranges rathe
 
 ## Monochrome and image clarity update (2026-10-14)
 
-The interface uses black, white and neutral gray. Product photographs retain their original colour; application images use a CSS grayscale presentation. Source files are not artificially upscaled or reconstructed. Low-resolution product and corporate sources are displayed within their native limits on 2x screens.
+The earlier monochrome interface used black, white and neutral gray, with CSS grayscale on application images. The reference-led redesign below replaces that presentation. Source files are not artificially upscaled or reconstructed. Low-resolution product and corporate sources are displayed within their native limits on 2x screens.
 
 Application-card images replaced with larger official application illustrations:
 - `photos/wearables.webp` — https://www.bpibattery.com/uploads/images/vr-ar.webp (1560 × 488)
@@ -89,3 +89,16 @@ Separate large application-banner sources:
 - `photos/iot-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-IOT.webp (1920 × 800)
 
 - `photos/lipo-photo.webp` updated to the 800 × 800 official Standard Li-Po product photograph: https://www.bpibattery.com/uploads/images/standard-li-po-batteries-for-manufacturers.webp . Specifications printed on the photographed cell refer only to that pictured configuration.
+
+## Reference-led redesign (2026-10-14)
+
+Design research used the published page structure and styles at https://www.svolt.cn/en and https://www.evebattery.com/en, plus their product/technology pages. EVE’s homepage scene and inner-page layouts were rendered for visual inspection. SVOLT’s CDN media was partially blocked, so its missing media was not treated as visually verified. No competitor media, specifications, company metrics or wording is distributed in this site.
+
+The shared interface is white, black and gray with small BPI red accents. Application imagery is shown in its original colour. The design uses wide scenes, separated chapters, category navigation and large readable headings with native scrolling.
+
+- `photos/portfolio-hero.webp` — https://www.bpibattery.com/uploads/images/bpi-battery-banner.webp (1920 × 940), downloaded unchanged. This is an official BPI product illustration; printed specifications apply to the pictured configurations only.
+- Original company film — https://www.bpibattery.com/themes/simple/img/video.mp4 (1920 × 800, 38 seconds), available from the official BPI domain.
+- `videos/bpi-company-film.mp4` — local playback copy of the original company film, encoded as H.264 at the original dimensions. Audio removed for silent viewing. No scenes added or reconstructed. Native controls, no autoplay and no preload of the video.
+- `photos/manufacturing-film.webp` — an unaltered frame from the original company film at 25 seconds, encoded as WebP at 1920 × 800. It is used as the film poster and homepage manufacturing image.
+
+All production assets remain local. New application tabs use static images, so they work with the same content hashes as other page media.

@@ -1,10 +1,10 @@
 # BPI website development
 
-A monochrome English B2B battery website with real BPI photography, built as static HTML for GitHub Pages. The core content and navigation work without JavaScript.
+A bright English B2B battery website with real BPI photography and company footage, built as static HTML for GitHub Pages. The core content and navigation work without JavaScript.
 
 ## Site structure
 
-- `src/index.html`: homepage with an interactive featured-product selector
+- `src/index.html`: homepage with a wide official portfolio image, five product-family entrances and keyboard-accessible application tabs
 - `src/products.html`: product finder, search, family filters and comparison table
 - Five product-family pages: `nimh.html`, `lithium-polymer.html`, `lifepo4.html`, `battery-packs.html`, `portable-power.html`
 - Fifteen `*-product-*.html` pages: individual catalog range and series details, with relevant enquiry context
@@ -19,7 +19,11 @@ A monochrome English B2B battery website with real BPI photography, built as sta
 
 `src/components/header.template` and `footer.template` are the shared static navigation components. `scripts/sync-layout.mjs` replaces only the marked shared blocks in every HTML page, preserving the individual page body. Both `npm run check` and `npm run build` synchronize the components, so global navigation cannot drift between pages. A page’s `data-section` attribute controls its active navigation state.
 
-Use `src/styles.css` for the shared design tokens, layouts and responsive rules. The locally hosted Manrope variable font and license are in `src/assets/fonts/`. Brand identity is retained in the official BPI logo; black, white and neutral gray form the editorial design palette. Body text uses stronger contrast and larger sizing. Application images use grayscale presentation while actual product photographs retain their original colour. Low-resolution sources have display limits for common 2x screens; application banners use larger official sources.
+Use `src/styles.css` for the shared design tokens, layouts and responsive rules. The stylesheet contains one base design with explicit responsive breakpoints, rather than successive theme overrides. The locally hosted Manrope font and license are in `src/assets/fonts/`. White, black and neutral gray form the interface, with restrained BPI red for navigation and emphasis. Official product and application imagery retains its colour.
+
+The homepage combines a full-width product scene, a five-family portfolio, an application showcase, customization and manufacturing. Scene tabs support arrow keys, Home and End; all three scenes remain readable without JavaScript. Internal category navigation connects every product family, application and customization service directly. Native details menus remain usable without JavaScript on desktop and mobile.
+
+The manufacturing page includes a local 1920 × 800 company film with native playback controls and `preload="none"`. It starts only when requested; the homepage does not download or autoplay video. The original film comes from BPI’s official site and the matching still is an unaltered frame. Existing smaller corporate and product photographs retain display limits; the new wide assets provide wider presentation without reconstructing product imagery.
 
 `src/page-index.js` supplies the browser-only global search. Update it when adding, renaming or removing a page. `src/content/site.json` records the product, application and service content for reference; edits to this reference data do not automatically regenerate page bodies.
 
@@ -56,4 +60,4 @@ The existing GitHub Actions workflow deploys `dist/` on pushes to `main`. Check 
 
 ## Asset refresh
 
-`scripts/version-assets.mjs` adds content-hash query versions to stylesheets, scripts, local images and fonts during check/build. The hero’s image URLs use the corresponding versions from the public site configuration. This prevents a fresh page from displaying a stale stylesheet or image after deployment. Photo selectors use substring matching so their source-resolution limits remain effective with versioned URLs.
+`scripts/version-assets.mjs` adds content-hash query versions to stylesheets, scripts, local images and fonts during check/build. Video sources and poster images also receive content versions. This prevents a fresh page from displaying a stale stylesheet or image after deployment. Photo selectors use substring matching so their source-resolution limits remain effective with versioned URLs.
