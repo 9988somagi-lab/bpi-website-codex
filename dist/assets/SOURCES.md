@@ -69,3 +69,23 @@ Logo: `bpi-logo.webp` — https://www.bpibattery.com/uploads/images/shenzhen-bet
 Local font: Manrope variable Latin, `@fontsource-variable/manrope` version 5.3.0 from registry.npmjs.org. Package SHA-512 integrity verified before extraction; license retained in `fonts/LICENSE`. No third-party font request is made by the website.
 
 Fifteen individual product pages describe verified official product ranges rather than claiming unverified individual model specifications. The resource centre provides general engineering briefing guidance; `Wh = V × Ah` is an energy relationship, not a runtime guarantee.
+
+## Monochrome and image clarity update (2026-10-14)
+
+The interface uses black, white and neutral gray. Product photographs retain their original colour; application images use a CSS grayscale presentation. Source files are not artificially upscaled or reconstructed. Low-resolution product and corporate sources are displayed within their native limits on 2x screens.
+
+Application-card images replaced with larger official application illustrations:
+- `photos/wearables.webp` — https://www.bpibattery.com/uploads/images/vr-ar.webp (1560 × 488)
+- `photos/robotics.webp` — https://www.bpibattery.com/uploads/images/robots.webp (1560 × 488)
+- `photos/medical.webp` — https://www.bpibattery.com/uploads/images/portable-diagnostics.webp (1560 × 488)
+- `photos/automotive.webp` — https://www.bpibattery.com/uploads/images/in-car-entertainment.webp (1560 × 488)
+- `photos/iot.webp` — https://www.bpibattery.com/uploads/images/surveillance-cameras.webp (1560 × 488)
+
+Separate large application-banner sources:
+- `photos/wearables-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-%E6%99%BA%E8%83%BD%E7%A9%BF%E6%88%B4.webp (1920 × 800)
+- `photos/robotics-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E6%9C%BA%E5%99%A8%E4%BA%BA.webp (1920 × 800)
+- `photos/medical-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-%E5%8C%BB%E7%94%A8%E8%AE%BE%E5%A4%87_1782270617.webp (1920 × 800)
+- `photos/automotive-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-%E8%BD%A6%E8%BD%BD%E8%AE%BE%E5%A4%87.webp (3168 × 1344)
+- `photos/iot-hero.webp` — https://www.bpibattery.com/uploads/images/1920x800-IOT.webp (1920 × 800)
+
+- `photos/lipo-photo.webp` updated to the 800 × 800 official Standard Li-Po product photograph: https://www.bpibattery.com/uploads/images/standard-li-po-batteries-for-manufacturers.webp . Specifications printed on the photographed cell refer only to that pictured configuration.

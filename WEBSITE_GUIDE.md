@@ -1,6 +1,6 @@
 # BPI website development
 
-A bright English B2B battery website with real BPI photography, built as static HTML for GitHub Pages. The core content and navigation work without JavaScript.
+A monochrome English B2B battery website with real BPI photography, built as static HTML for GitHub Pages. The core content and navigation work without JavaScript.
 
 ## Site structure
 
@@ -19,7 +19,7 @@ A bright English B2B battery website with real BPI photography, built as static 
 
 `src/components/header.template` and `footer.template` are the shared static navigation components. `scripts/sync-layout.mjs` replaces only the marked shared blocks in every HTML page, preserving the individual page body. Both `npm run check` and `npm run build` synchronize the components, so global navigation cannot drift between pages. A page’s `data-section` attribute controls its active navigation state.
 
-Use `src/styles.css` for the shared design tokens, layouts and responsive rules. The locally hosted Manrope variable font and license are in `src/assets/fonts/`. Brand identity is retained in the official BPI logo; emerald, mint and lake-blue accents form the energy design palette.
+Use `src/styles.css` for the shared design tokens, layouts and responsive rules. The locally hosted Manrope variable font and license are in `src/assets/fonts/`. Brand identity is retained in the official BPI logo; black, white and neutral gray form the editorial design palette. Body text uses stronger contrast and larger sizing. Application images use grayscale presentation while actual product photographs retain their original colour. Low-resolution sources have display limits for common 2x screens; application banners use larger official sources.
 
 `src/page-index.js` supplies the browser-only global search. Update it when adding, renaming or removing a page. `src/content/site.json` records the product, application and service content for reference; edits to this reference data do not automatically regenerate page bodies.
 
