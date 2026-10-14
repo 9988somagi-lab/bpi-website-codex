@@ -50,7 +50,8 @@
       event.preventDefault();
       const selected = selections[selector.dataset.hero];
       const img = stage.querySelector('img');
-      img.src = `./assets/photos/${selected.image}.webp`;
+      const version = window.SITE_CONFIG.assetVersions?.[selected.image];
+      img.src = `./assets/photos/${selected.image}.webp${version ? "?v=" + version : ""}`;
       img.alt = selected.alt;
       stage.querySelector('[data-stage-link]').href = selector.getAttribute('href');
       stage.querySelector('[data-stage-link]').setAttribute('aria-label', 'Explore ' + selected.family);

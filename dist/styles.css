@@ -1,6 +1,6 @@
 @font-face{
   font-family:Manrope;
-  src:url('./assets/fonts/manrope-latin.woff2') format('woff2');
+  src:url('./assets/fonts/manrope-latin.woff2?v=a30ddcd349') format('woff2');
   font-style:normal;
   font-weight:200 800;
   font-display:swap
@@ -2464,23 +2464,23 @@ h3 { font-weight: 650; letter-spacing: -.025em; }
 }
 
 /* Product images never exceed half their native width on 2x displays. */
-img[src$="/photos/station-mb.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/station-f.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/station-q.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/nimh-industrial.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/nimh-photo.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
-img[src$="/photos/nimh-cells.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
-img[src$="/photos/nimh-pack.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/lipo-photo.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/lipo-high-rate.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/lipo-pack.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
-img[src$="/photos/lifepo4-photo.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
-img[src$="/photos/lifepo4-24.webp"] { --photo-retina-width: 500px; --photo-retina-height: 500px; }
-img[src$="/photos/lifepo4-48.webp"] { --photo-retina-width: 312.5px; --photo-retina-height: 312.5px; }
-img[src$="/photos/pack-photo.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
-img[src$="/photos/pack-nimh.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
-img[src$="/photos/bms.webp"] { --photo-retina-width: 270px; --photo-retina-height: 202.5px; }
-img[src$="/photos/custom.webp"] { --photo-retina-width: 270px; --photo-retina-height: 202.5px; }
+img[src*="/photos/station-mb.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/station-f.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/station-q.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/nimh-industrial.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/nimh-photo.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
+img[src*="/photos/nimh-cells.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
+img[src*="/photos/nimh-pack.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/lipo-photo.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/lipo-high-rate.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/lipo-pack.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
+img[src*="/photos/lifepo4-photo.webp"] { --photo-retina-width: 400px; --photo-retina-height: 400px; }
+img[src*="/photos/lifepo4-24.webp"] { --photo-retina-width: 500px; --photo-retina-height: 500px; }
+img[src*="/photos/lifepo4-48.webp"] { --photo-retina-width: 312.5px; --photo-retina-height: 312.5px; }
+img[src*="/photos/pack-photo.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
+img[src*="/photos/pack-nimh.webp"] { --photo-retina-width: 273px; --photo-retina-height: 178px; }
+img[src*="/photos/bms.webp"] { --photo-retina-width: 270px; --photo-retina-height: 202.5px; }
+img[src*="/photos/custom.webp"] { --photo-retina-width: 270px; --photo-retina-height: 202.5px; }
 .product-image img, .hero-photo-card > img, .energy-stage-img {
   max-width: min(100%, var(--photo-retina-width, 400px));
   max-height: var(--photo-retina-height, 400px);
@@ -2494,7 +2494,7 @@ img[src$="/photos/custom.webp"] { --photo-retina-width: 270px; --photo-retina-he
 .photo-grid img { max-width: 375px; margin-inline: auto; height: auto; aspect-ratio: auto; }
 body[data-section="about"] .inner-hero .photo { max-width: 375px; margin-inline: auto; aspect-ratio: auto; height: auto; }
 body[data-section="applications"] .inner-hero .photo { aspect-ratio: 2.4; }
-body[data-section="applications"] .inner-hero .photo[src$="/home-energy.webp"] { aspect-ratio: 3.2; }
+body[data-section="applications"] .inner-hero .photo[src*="/home-energy.webp"] { aspect-ratio: 3.2; }
 .application-card img, body[data-section="applications"] .inner-hero .photo {
   filter: grayscale(1);
 }

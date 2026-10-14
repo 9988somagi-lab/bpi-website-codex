@@ -53,3 +53,7 @@ npm run build
 Checks validate headings, assets, page links, cross-page anchors and navigation reachability. Inspect desktop and mobile layouts, global search, menus, product filters and end-to-end enquiry journeys when changing UI. The build synchronizes shared components and copies `src/` to `dist/`.
 
 The existing GitHub Actions workflow deploys `dist/` on pushes to `main`. Check the workflow outcome and live content before claiming an online update has completed.
+
+## Asset refresh
+
+`scripts/version-assets.mjs` adds content-hash query versions to stylesheets, scripts, local images and fonts during check/build. The hero’s image URLs use the corresponding versions from the public site configuration. This prevents a fresh page from displaying a stale stylesheet or image after deployment. Photo selectors use substring matching so their source-resolution limits remain effective with versioned URLs.
