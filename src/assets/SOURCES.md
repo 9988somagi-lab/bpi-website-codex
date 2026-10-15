@@ -102,3 +102,11 @@ The shared interface is white, black and gray with small BPI red accents. Applic
 - `photos/manufacturing-film.webp` — an unaltered frame from the original company film at 25 seconds, encoded as WebP at 1920 × 800. It is used as the film poster and homepage manufacturing image.
 
 All production assets remain local. New application tabs use static images, so they work with the same content hashes as other page media.
+
+## Green overseas B2B homepage (2026-10-15)
+
+The homepage uses a white and deep-green interface with pale-green surfaces, the unchanged BPI logo, and local official imagery. The 1920 × 940 `rechargeable-future.webp` is the hero concept illustration; it does not represent a recycling service or an environmental certification. The original product photographs, BMS illustration and 1920 × 800 manufacturing-film frame are retained without upscaling or reconstruction.
+
+Company founding year, Shenzhen headquarters and pilot production base, Jiangxi industrial park, product-family names, application categories and the three customization services were rechecked against the BPI official homepage and company profile on 2026-10-15. No product performance, capacity, cycle-life, carbon-reduction, certification or customer claims were added. Product markings apply only to the photographed configuration.
+
+The published structure of https://www.svolt.cn/en informed the spacious product, application and manufacturing chapters. No SVOLT assets, company claims or specifications are reused. Product and enquiry links continue to the existing BPI pages.
